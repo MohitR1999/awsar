@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, useRouteMatch } from 'react-router-dom';
 import { Menu, Layout, Row, Col } from 'antd';
 
 const Nav = () => {
@@ -9,6 +9,7 @@ const Nav = () => {
         console.log('[Click] : ', e);
         setCurrent(prevCurrent => e.key);
     }
+    let match = useRouteMatch();
 
     return (
         <Layout.Header style={{ padding: 0 }}>
@@ -23,14 +24,14 @@ const Nav = () => {
                     <Menu.Item key="other">Other</Menu.Item>
                 </Menu.SubMenu>
                 <Menu.Item key="analytics">
-                    <Link to="/analytics">
+                    <Link to={`/analytics`}>
                         Analytics
                     </Link>
                 </Menu.Item>
                 <Menu.Item key="ideas">Ideas</Menu.Item>
                 <Menu.Item key="how-it-works">How It Works</Menu.Item>
                 <Menu.Item key="team">
-                    <Link to="/team">
+                    <Link to={`/team`}>
                         Team
                     </Link>
                 </Menu.Item>

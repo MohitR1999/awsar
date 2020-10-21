@@ -1,10 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useRouteMatch } from 'react-router-dom';
 import { Layout } from 'antd';
 import Nav from '../Nav';
 import Team from '../Team';
 import Analytics from '../Analytics';
+
 const Main = () => {
+    
+    let match = useRouteMatch();
+    
     return (
         <Router>
             <Layout>
