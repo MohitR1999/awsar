@@ -1,0 +1,6 @@
+.hero {
+    height: 100vh;
+    padding: 20% 2%;
+    justify-content: center;
+    flex-direction: column;
+}
