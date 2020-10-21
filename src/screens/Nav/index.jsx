@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link} from 'react-router-dom';
-import {Menu, Layout} from 'antd';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Menu, Layout, Row, Col } from 'antd';
 
 const Nav = () => {
 
@@ -10,8 +10,8 @@ const Nav = () => {
         setCurrent(prevCurrent => e.key);
     }
 
-    return(
-        <Layout.Header>
+    return (
+        <Layout.Header style={{ padding: 0 }}>
             <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
                 <Menu.SubMenu key="profile-submenu" title="Profile">
                     <Menu.Item key="student">
@@ -31,7 +31,7 @@ const Nav = () => {
                 <Menu.Item key="how-it-works">How It Works</Menu.Item>
                 <Menu.Item key="team">
                     <Link to="/team">
-                    Team
+                        Team
                     </Link>
                 </Menu.Item>
             </Menu>
@@ -40,3 +40,13 @@ const Nav = () => {
 }
 
 export default Nav;
+
+
+/**
+ * Created by:
+ __  __       _     _ _   
+|  \/  | ___ | |__ (_) |_ 
+| |\/| |/ _ \| '_ \| | __|
+| |  | | (_) | | | | | |_ 
+|_|  |_|\___/|_| |_|_|\__|
+ */
