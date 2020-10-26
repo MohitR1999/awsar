@@ -4,6 +4,8 @@ import { Layout } from 'antd';
 import Nav from '../Nav';
 import Team from '../Team';
 import Analytics from '../Analytics';
+import Ideas from '../Ideas';
+import HowItWorks from '../HowItWorks';
 
 const Main = () => {
     
@@ -20,6 +22,12 @@ const Main = () => {
                         </Route>
                         <Route path="/team">
                             <Team />
+                        </Route>
+                        <Route path="/ideas">
+                            <Ideas />
+                        </Route>
+                        <Route path="/working">
+                            <HowItWorks />
                         </Route>
                     </Switch>
                 </Layout.Content>

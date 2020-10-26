@@ -9,7 +9,6 @@ const Home = () => {
             <Layout.Content>
                 <h1>Welcome to Awsar</h1>
                 <h2>We provide one stop solution for all your job needs</h2>
-                
                 <Button type="primary" size="large">
                     <Link to="/analytics">
                         GO

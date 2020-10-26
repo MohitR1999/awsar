@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Link, useRouteMatch } from 'react-router-dom';
-import { Menu, Layout, Row, Col } from 'antd';
+import { Menu, Layout, Typography } from 'antd';
 
 const Nav = () => {
 
@@ -9,30 +9,45 @@ const Nav = () => {
         console.log('[Click] : ', e);
         setCurrent(prevCurrent => e.key);
     }
-    let match = useRouteMatch();
 
     return (
         <Layout.Header style={{ padding: 0 }}>
             <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-                <Menu.SubMenu key="profile-submenu" title="Profile">
+                <Menu.SubMenu key="profile-submenu" title={"Profile"}>
                     <Menu.Item key="student">
-                        Student
+                            Student
                     </Menu.Item>
-                    <Menu.Item key="government">Government</Menu.Item>
-                    <Menu.Item key="ed-inst">Educational Institute</Menu.Item>
-                    <Menu.Item key="job-seeker">Job Seeker</Menu.Item>
-                    <Menu.Item key="other">Other</Menu.Item>
+                    <Menu.Item key="government">
+                            Government
+                    </Menu.Item>
+                    <Menu.Item key="ed-inst">
+                            Educational Institute
+                    </Menu.Item>
+                    <Menu.Item key="job-seeker">
+                            Job Seeker
+                    </Menu.Item>
+                    <Menu.Item key="other">
+                            Other
+                    </Menu.Item>
                 </Menu.SubMenu>
                 <Menu.Item key="analytics">
                     <Link to={`/analytics`}>
-                        Analytics
+                            Analytics
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="ideas">Ideas</Menu.Item>
-                <Menu.Item key="how-it-works">How It Works</Menu.Item>
+                <Menu.Item key="ideas">
+                    <Link to="/ideas">
+                            Ideas
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="how-it-works">
+                    <Link to="/working">
+                            How it works
+                    </Link>
+                </Menu.Item>
                 <Menu.Item key="team">
                     <Link to={`/team`}>
-                        Team
+                            Team
                     </Link>
                 </Menu.Item>
             </Menu>
@@ -45,9 +60,9 @@ export default Nav;
 
 /**
  * Created by:
- __  __       _     _ _   
-|  \/  | ___ | |__ (_) |_ 
+ __  __       _     _ _
+|  \/  | ___ | |__ (_) |_
 | |\/| |/ _ \| '_ \| | __|
-| |  | | (_) | | | | | |_ 
+| |  | | (_) | | | | | |_
 |_|  |_|\___/|_| |_|_|\__|
  */
